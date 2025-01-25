@@ -1,60 +1,64 @@
 * {
+  scroll-behavior: smooth;
 
-    margin: 0;
-    padding: 0;
-    box-sizing:border-box;
-     }
-    
-body{
+  box-sizing: border-box;
+}
 
-font-family: Arial, Helvetica, sans-serif;
+body {
+
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+
+.header {
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 20px;
+  position: sticky;
+  top: 0;
+}
+
+.logo img {
+
+  width: 200px;
 
 }
 
-.header{
+.nav ul {
 
-display: flex;
-justify-content: space-between;
-align-items: center;
-background-color: #ffffff;
-padding: 20px;
-}
-
-.logo img{
-
-width:200px;
+  display: flex;
+  list-style: none;
 
 }
 
-.nav ul{
+.nav li {
 
-    display: flex;
-    list-style: none;
-
-}
-
-.nav li{
-
-margin-left: 20px;
+  margin-left: 20px;
 
 }
 
 .nav a {
 
-color: rgb(8, 8, 8);
-text-decoration: none;
-font-size: 16px;
-padding: 5px 10px;
-transition:background-color 0.3s ease;;
-font-size: 20px;
+  color: rgb(8, 8, 8);
+  text-decoration: none;
+  font-size: 16px;
+  padding: 5px 10px;
+  transition: background-color 0.3s ease;
+  ;
+  font-size: 20px;
 
 }
 
 .nav a:hover {
 
-background-color: purple;
-border-radius: 5px;
-color: #ffffff;
+  background-color: purple;
+  border-radius: 5px;
+  color: #ffffff;
 
 
 
@@ -62,193 +66,211 @@ color: #ffffff;
 
 /* Mobil Responsive */
 
-@media (max-width: 758px){
+@media (max-width: 758px) {
 
-.header {
+  .header {
 
-flex-direction: column;
-align-items: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
 
-}
+  }
 
-.nav ul {
+  .nav ul {
 
-width: 100%;
-flex-direction: column;
-align-items: flex-start;
-margin-top: 10px;
-}
-
-
-.nav li {
-
-margin:10px 0;
-}
-
-.logo img {
-
-width:80px;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 10px;
+  }
 
 
+  .nav li {
 
-}
+    margin: 10px 0;
+  }
+
+  .logo img {
+
+    width: 100px;
+
+  }
 
 
 }
 
 .hero {
-    position: relative; /* Added position relative for overlay */
-    background-image: url('https://www.tomorrow.city/wp-content/uploads/2023/10/skyscraper_1.jpg');
-    background-size: cover; /* Adjusted to cover for a better fit on all devices */
-    background-position: center;
-    width: 100%;
-    height: 80vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: rgb(255, 255, 255);
-    background-repeat: repeat; /* Changed to no-repeat */
-  }
-  
-  .hero::before {
-    content: '';
-    position: absolute; /* Absolute positioning for overlay */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(14, 13, 14, 0.556); /* Purple overlay with 50% opacity */
-    z-index: 1; /* Ensure overlay is on top */
-  }
-  
-  .hero-content {
-    position: relative; /* Ensure content is above overlay */
-    z-index: 2;
-  }
-  
-  .hero-content h1 {
-    font-size: 3rem;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
-  
-  .hero-content p {
-    font-size: 1.25rem;
-    margin-bottom: 30px;
-  }
-  
-  .cta-button {
-    padding: 15px 30px;
-    background-color: purple;
-    color: white;
-    font-size: 1rem;
-    text-decoration: none;
-    border-radius: 30px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .cta-button:hover {
-    background-color: #e67e22;
-  }
-  
-  /* Media Queries for Mobile Responsiveness */
-  @media (max-width: 768px) {
-    .hero {
-      height: 60vh; /* Reduced height for smaller screens */
-    }
-  
-    .hero-content h1 {
-      font-size: 2rem; /* Smaller font size for mobile */
-    }
-  
-    .hero-content p {
-      font-size: 1rem; /* Smaller font size for mobile */
-    }
-  
-    .cta-button {
-      font-size: 0.9rem; /* Adjusted button size for mobile */
-      padding: 10px 20px;
-    }
+  position: relative;
+  /* Added position relative for overlay */
+  background-image: url('https://www.tomorrow.city/wp-content/uploads/2023/10/skyscraper_1.jpg');
+  background-size: cover;
+  /* Adjusted to cover for a better fit on all devices */
+  background-position: center;
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  background-repeat: repeat;
+  /* Changed to no-repeat */
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  /* Absolute positioning for overlay */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(14, 13, 14, 0.556);
+  /* Purple overlay with 50% opacity */
+  z-index: 1;
+  /* Ensure overlay is on top */
+}
+
+.hero-content {
+  position: relative;
+  /* Ensure content is above overlay */
+  z-index: 2;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  padding: 15px 30px;
+  background-color: purple;
+  color: white;
+  font-size: 1rem;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #e67e22;
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+  .hero {
+    height: 60vh;
+    /* Reduced height for smaller screens */
   }
 
-  .cards-section {
-    display: flex;
-    justify-content: space-between; /* Adjusted to space between cards */
-    padding: 50px 10%; /* Added padding to left and right */
-    background-color: #f8f9fa; /* Light background color for the section */
-    gap: 20px; /* Added gap between cards */
-    flex-wrap: wrap; /* Allow cards to wrap to the next line on smaller screens */
+  .hero-content h1 {
+    font-size: 2rem;
+    /* Smaller font size for mobile */
   }
-  
-  .card {
-    background-color: white;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 30%;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  .card img {
-    width: 100%;
-    height: 200px; /* Fixed height for images */
-    object-fit: cover; /* Ensure images cover the fixed height */
-    border-radius: 8px;
-    margin-bottom: 15px;
-  }
-  
-  .card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-  }
-  
-  .card p {
+
+  .hero-content p {
     font-size: 1rem;
-    margin-bottom: 20px;
+    /* Smaller font size for mobile */
   }
-  
-  .card-button {
+
+  .cta-button {
+    font-size: 0.9rem;
+    /* Adjusted button size for mobile */
     padding: 10px 20px;
-    background-color: purple;
-    color: white;
-    font-size: 1rem;
-    text-decoration: none;
-    border-radius: 30px;
-    transition: background-color 0.3s ease;
   }
-  
-  .card-button:hover {
-    background-color: purple;
+}
+
+.cards-section {
+  display: flex;
+  justify-content: space-between;
+  /* Adjusted to space between cards */
+  padding: 50px 10%;
+  /* Added padding to left and right */
+  background-color: #f8f9fa;
+  /* Light background color for the section */
+  gap: 20px;
+  /* Added gap between cards */
+  flex-wrap: wrap;
+  /* Allow cards to wrap to the next line on smaller screens */
+}
+
+.card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 30%;
+  padding: 20px;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  /* Fixed height for images */
+  object-fit: cover;
+  /* Ensure images cover the fixed height */
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.card-button {
+  padding: 10px 20px;
+  background-color: purple;
+  color: white;
+  font-size: 1rem;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: background-color 0.3s ease;
+}
+
+.card-button:hover {
+  background-color: purple;
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+  .card {
+    width: 100%;
+    /* Full width for mobile */
+    margin-bottom: 20px;
+    /* Space between cards on mobile */
   }
-  
-  /* Media Queries for Mobile Responsiveness */
-  @media (max-width: 768px) {
-    .card {
-      width: 100%; /* Full width for mobile */
-      margin-bottom: 20px; /* Space between cards on mobile */
-    }
-  }
- 
-  .footer {
-    background-color: purple;
-    color: white;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  .footer p {
-    margin: 0;
-    font-size: 1rem;
-  }
-  
-  .footer a {
-    color: #f39c12;
-    text-decoration: none;
-    margin: 0 10px;
-  }
-  
-  .footer a:hover {
-    text-decoration: underline;
-  }
+}
+
+.footer {
+  background-color: purple;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.footer a {
+  color: #f39c12;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
